@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: rgb(147, 178, 235);
+   
+}
+.card{
+    width: 320px;
+    height: 500px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    backdrop-filter: blur(10px);
+    transition: 1s;
+
+}
+
+
+.card:hover .card-body{
+    left: 0;
+}
+
+
+.card:hover .card-info{
+right: 0;
+}
+
+
+
+.card-info{
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform: rotate(30deg);
+}
+
+.mehedi{
+    margin-left: 30px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    position: relative;
+cursor: pointer;
+}
+
+ .mehedi::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:4px;
+    left: 0;
+    bottom: -15%;
+    background-color: rgb(240, 74, 8);
+    transform: scale(0);
+    transition: 1s;
+    
+} 
+
+.mehedi:hover::after{
+   transform: scale(1);
+}
+
+.Sanjida{
+    margin-left: 30px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    position: relative;
+cursor: pointer;
+
+}
+.Sanjida::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height:3px;
+    left: 0;
+    bottom: -15%;
+    background-color: rgb(243, 24, 126);
+    transition: 0.5s;
+    
+} 
+.Sanjida:hover::after{
+    width: 100%;
+ }
